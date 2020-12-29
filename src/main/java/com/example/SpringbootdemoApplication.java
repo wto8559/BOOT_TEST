@@ -15,6 +15,9 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 注意，启动器只加载其所在同级别包下的内容，对其上级包中内容不扫描
+ *
+ *
+ *
  */
 
 @SpringBootApplication
