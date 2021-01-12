@@ -29,7 +29,12 @@ mybatis:
   type-aliases-package: com.example.pojo
   mapper-locations: classpath*:/mapper/*.xml
 
-
+#pagehelper
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
 
 
 
