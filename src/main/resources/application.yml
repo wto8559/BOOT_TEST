@@ -1,0 +1,37 @@
+server:
+  port: 9090
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+  datasource:
+    #数据源基本配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test1?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
+    username: admin
+    password: 111111
+    type: com.alibaba.druid.pool.DruidDataSource
+    #数据源其它配置
+    schema:
+      - classpath:sql/initTable.sql
+      - classpath:sql/initTable2.sql
+
+
+
+mybatis:
+  type-aliases-package: com.example.pojo
+  mapper-locations: classpath*:/mapper/*.xml
+
+
+
+
+
+
+

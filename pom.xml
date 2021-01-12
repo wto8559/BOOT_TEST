@@ -9,7 +9,7 @@
         <version>2.1.3.RELEASE</version>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>springbootdemo</artifactId>
+    <artifactId>BOOT_TEST</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
 
