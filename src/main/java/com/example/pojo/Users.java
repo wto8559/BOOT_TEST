@@ -1,10 +1,16 @@
 package com.example.pojo;
 
-public class Users {
+import java.io.Serializable;
+
+public class Users implements Serializable{
 	private Integer id;
 	private String name;
 	private Integer sex;
 	private Integer course_id;
+
+	public Users() {
+
+	}
 
 	public Users(String name,Integer sex,Integer course_id){
 		this.name=name;
