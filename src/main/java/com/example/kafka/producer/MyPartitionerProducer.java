@@ -7,10 +7,10 @@ import java.util.Properties;
 /**
  * kafka带回调函数的生产者
  */
-public class CallBackProducer {
+public class MyPartitionerProducer {
     public static void main(String[] args) {
         Properties properties = new Properties();
-        String topic="test1";
+        String topic="bbbbb";
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.46.10:9092");
         properties.put(ProducerConfig.ACKS_CONFIG, "all");
         properties.put(ProducerConfig.RETRIES_CONFIG,5);
@@ -22,10 +22,13 @@ public class CallBackProducer {
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,"org.apache.kafka.common.serialization.StringSerializer");
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,"org.apache.kafka.common.serialization.StringSerializer");
 
+        //添加分区器
+        properties.put(ProducerConfig.PARTITIONER_CLASS_CONFIG,"com.example.kafka.partitioner.MyPartitioner ");
+
         KafkaProducer<String,String> producer=new KafkaProducer(properties);
 
-        for (int i=0;i<10;i++){
-            producer.send(new ProducerRecord<String, String>(topic, "1","testtopic" + i), new Callback() {
+        for (int i=100;i<103;i++){
+            producer.send(new ProducerRecord<String, String>(topic, "3","testtopic" + i), new Callback() {
                 @Override
                 public void onCompletion(RecordMetadata metadata, Exception exception) {
                     if(exception==null){
