@@ -25,5 +25,18 @@
 			</tr>
 		</c:forEach>
 	</table>
+
+
+	<div id="dom1">
+
+	</div>
+
+<script type="text/javascript">
+	function test(){
+	    $('#dom1').html("<a herf='#'>123456</a>")
+	}
+	test();
+
+</script>
 </body>
 </html>

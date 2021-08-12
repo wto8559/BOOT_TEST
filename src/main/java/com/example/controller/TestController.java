@@ -3,13 +3,12 @@ package com.example.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.annotation.SelfAnnotation;
+import com.example.annotation.WtSelfAnnotation;
 import com.example.pojo.Users;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * SpringBoot HelloWorld
@@ -26,8 +25,8 @@ public class TestController {
 		personMap.put("b","222");
 	}
 
+	@WtSelfAnnotation
 	@RequestMapping("/hello")
-	@SelfAnnotation
 	public Map<String, Object> showHelloWorld(){
 		Map<String, Object> map = new HashMap<>();
 		map.put("msg", "HelloWorld");

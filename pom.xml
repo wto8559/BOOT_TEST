@@ -13,7 +13,6 @@
     <version>0.0.1-SNAPSHOT</version>
 
 
-
     <!-- 修改jdk版本 -->
     <properties>
         <java.version>1.8</java.version>
@@ -22,9 +21,6 @@
         <elasticsearch.version>7.6.1</elasticsearch.version>
         <elasticsearch>7.6.1</elasticsearch>
     </properties>
-
-
-
 
 
     <dependencies>
@@ -153,12 +149,16 @@
             <version>${elasticsearch}</version>
         </dependency>
 
-
-
-
-
         <!-- ==================elasticSearch 相关jar包  end ==================================-->
 
+
+           
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+            <scope>provided</scope>
+        </dependency>
 
 
     </dependencies>

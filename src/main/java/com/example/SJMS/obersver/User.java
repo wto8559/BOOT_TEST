@@ -6,6 +6,7 @@ package com.example.SJMS.obersver;
  * @author jstao
  *
  */
+
 public class User implements Observer {
 
     private String name;

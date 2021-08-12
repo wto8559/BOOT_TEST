@@ -35,7 +35,7 @@ public class SpringbootdemoApplication {
 	/**
 	 * 注册servlet
 	 * @return
-	 */
+	 *//*
 	@Bean
 	public ServletRegistrationBean getServletRegistrationBean(){
 		ServletRegistrationBean bean = new ServletRegistrationBean(new SecondServlet());
@@ -44,9 +44,9 @@ public class SpringbootdemoApplication {
 	}
 
 
-	/**
+	*//**
 	 * 注册Filter
-	 */
+	 *//*
 	@Bean
 	public FilterRegistrationBean getFilterRegistrationBean(){
 		FilterRegistrationBean bean = new FilterRegistrationBean(new SecondFilter());
@@ -56,13 +56,13 @@ public class SpringbootdemoApplication {
 	}
 
 
-	/**
+	*//**
 	 * 注册listener
-	 */
+	 *//*
 	@Bean
 	public ServletListenerRegistrationBean<SecondListener> getServletListenerRegistrationBean(){
 		ServletListenerRegistrationBean<SecondListener> bean= new ServletListenerRegistrationBean<SecondListener>(new SecondListener());
 		return bean;
-	}
+	}*/
 
 }

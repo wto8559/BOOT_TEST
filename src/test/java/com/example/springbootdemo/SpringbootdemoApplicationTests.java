@@ -3,6 +3,7 @@ package com.example.springbootdemo;
 
 import com.alibaba.fastjson.JSON;
 import com.example.pojo.Users;
+import org.elasticsearch.client.RestHighLevelClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @WebAppConfiguration
 public class SpringbootdemoApplicationTests {
+
 
 
 	@Autowired
